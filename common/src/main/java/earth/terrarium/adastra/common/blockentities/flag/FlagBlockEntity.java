@@ -51,7 +51,7 @@ public class FlagBlockEntity extends BlockEntity {
             setOwner(NbtUtils.readGameProfile(tag.getCompound("FlagOwner")));
         }
         if (tag.contains("FlagUrl", Tag.TAG_STRING)) {
-            this.content = UrlContent.of("https://imgur.com/" + tag.getString("FlagUrl"));
+            this.content = UrlContent.of("https://catbox.moe/" + tag.getString("FlagUrl"));
         }
         if (tag.contains("FlagContent", Tag.TAG_COMPOUND)) {
             this.content = FlagContent.fromTag(tag.getCompound("FlagContent"));
